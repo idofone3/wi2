@@ -51,7 +51,12 @@ jobs:
         echo "2. TCP → localhost:3389"
         echo "3. mstsc /v:your-tunnel-url"
         echo "=================================="
+    - name: install oc
+      shell: cmd
+      run: |
+         npm install -g @opencode/cli
 
+         
     - name: Keep Alive 6hrs
       timeout-minutes: 360
       shell: cmd
